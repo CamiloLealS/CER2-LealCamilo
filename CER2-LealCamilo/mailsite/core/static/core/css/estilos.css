@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #9055A2;
+    padding-bottom: 1%;
+}
+
+header h1{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: hsl(353, 45%, 92%);
+    background: -webkit-linear-gradient(to right, hsl(353, 45%, 92%) hsla(283, 67%, 26%, 0.689)), url(../img/fondo.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsl(353, 45%, 92%), hsla(283, 67%, 26%, 0.66)), url(../img/fondo.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#buscar{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#tabla{
+    margin-top: 3%;
+    background-color:#E8C1C5;
+}
+
+#header-tabla{
+    background-color: #D499B9;
+}
+
+#btn-register{
+    margin-left: 82%;
+    margin-bottom: 1%;
+}

@@ -1,0 +1,30 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>{% block title %} {% endblock  %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{% static 'core/css/bootstrap.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    </head>
+    <header>
+        <nav>
+            <nav-item>
+                <img src="{% static 'core/img/email.png' %}" alt="" height="40px" width="40px">
+                <h1>{% block header %} {%endblock  %}</h1>
+            </nav-item>
+            <nav-item>
+                <a href="{% url 'home' %}"><button type="button" class="btn btn-outline-light">Inicio</button></a>
+            </nav-item>
+            <nav-item>
+                <a href="{% url 'mail' %}"><button type="button" class="btn btn-outline-light">Correspondencias</button></a>
+            </nav-item>
+        </nav>
+    </header>
+    <body>
+        {% block content %}
+        {% endblock  %}
+    </body>
+</html>

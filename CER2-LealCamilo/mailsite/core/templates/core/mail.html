@@ -1,0 +1,43 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Mails{% endblock  %}
+
+{% block header %}Lista de Correspondencias{% endblock header %}
+
+{% block content %}
+    <form method="get">
+    <div class="container" id="tabla">
+        <section id="buscar">
+            <input type="text" placeholder="Numero residencia" name="buscar" value="{{request.GET.buscar}}">
+            <button type="submit" class="btn btn-outline-dark">Buscar</button>
+        </section>
+        <table class="table" >
+            <thead id="header-tabla">
+                <tr>
+                    <th scope="col">Residencia</th>
+                    <th scope="col">Destinatario</th>
+                    <th scope="col">Remitente</th>
+                    <th scope="col">Conserje</th>
+                    <th scope="col">Fecha recepción</th>
+                    <th scope="col">Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in mail %}
+                    <tr>
+                        <th scope="row">{{i.numero_residencia}}</th>
+                        <td>{{i.destinatario}}</td>
+                        <td>{{i.remitente}}</td>
+                        <td>{{i.conserje}}</td>
+                        <td>{{i.fecha_recepcion}}</td>
+                        <td>{{i.estado}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'admin:index' %}"><button type="button" class="btn btn-outline-dark" id="btn-register">Registrar Correspondencia</button></a>
+    </div>
+    </form>
+
+
+{% endblock %}
